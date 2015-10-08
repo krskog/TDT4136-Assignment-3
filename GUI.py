@@ -13,7 +13,7 @@ some_colors = {
 }
 
 BLACK = '#000000'
-YELLOW = '#FFFF00'
+ORANGE = '#FFBF00'
 PURPLE = '#8000FF'
 
 TILE_SIDE = 32
@@ -51,7 +51,7 @@ def draw_map(board, file_path, path=None, open_nodes=None, closed_nodes=None):
         image.paste(PURPLE, small_dot(node.x, node.y))
 
     for node in closed_nodes:
-        image.paste(YELLOW, small_dot(node.x, node.y))
+        image.paste(ORANGE, small_dot(node.x, node.y))
 
     for node in path:
         image.paste(BLACK, big_dot(node.x, node.y))
