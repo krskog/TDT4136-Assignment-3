@@ -37,7 +37,9 @@ class Board:
 				elif self.lines[i][j] == "B":
 					self.end_node = node
 
-	def in_bounds(self, x, y):
+		self.nodes = nodes
+
+	def is_within_bounds(self, x, y):
 		return x in range(self.height) and y in range(self.width)
 
 	def get_adjacent_nodes(self, node, allow_diagonal=False):
@@ -45,5 +47,5 @@ class Board:
 						  for b in range(-1, 2)
 						  for a in range(-1, 2)
 						  if (allow_diagonal or abs(a) != abs(b))
-						  and self.in_bounds(node.x + a, node.y + b)]
+						  and self.is_within_bounds(node.x + a, node.y + b)]
 		return [n for n in adjacent_nodes if not n.is_wall]
