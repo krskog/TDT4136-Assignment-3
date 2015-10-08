@@ -19,7 +19,7 @@ class Board:
 		try:
 			open_file = open(file_path)
 		except IOError:
-			print("Could not open {}".format(file_path))
+			print"Could not open {}".format(file_path)
 
 		self.lines = [[c for c in line.strip()] for line in open_file.readlines() if not line.isspace()]
 		self.node_weights = [list(map(get_weight, row)) for row in self.lines]

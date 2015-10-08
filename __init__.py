@@ -5,7 +5,8 @@ from pathfinding import find_path, ALGORITHMS
 
 if __name__ == '__main__':
 	dir_name = os.getcwd()
-	for filename in os.listdir(os.path.join/dir_name, "boards")):
+	for filename in os.listdir(os.path.join(dir_name, 'boards')):
+
 	for algorithm in ALGORITHMS:
 		board = Board(Os.path.join(dir_name, "boards", filename))
 
