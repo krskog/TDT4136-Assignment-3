@@ -11,15 +11,13 @@ euclidean = lambda a, b: sqrt(abs(a.x - b.x) ** 2 + abs(a.y - b.y) ** 2)
 
 def find_path(board, algorithm='astar', heuristic=manhattan_distance):
     
-# initilize board object
-'''
-    :param board: initialized board object
-    :param algorithm: text string, one of the options in ALGORITHMS
-    :param heuristic: manhattan_distance or euclidean
-    :return: tuple of (1) list of nodes in the path from board.start_node to board.end_node
-                      (2) list of remaining open nodes
-                      (3) list of closed nodes
-    '''
+# board: initilize board object.
+#algorithm: a text string (option in ALGORITHMS)
+#heuristic: manhattan_distance
+#return: 1, list of nodes in path from board.start_node to board.end_node
+#        2, list of open nodes
+#        3, list of closed nodes
+
     use_heap_methods = (algorithm != 'bfs')
 
     closed_nodes, open_nodes = list(), list()
